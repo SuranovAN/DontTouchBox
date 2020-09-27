@@ -1,4 +1,5 @@
 public class Main {
+    private static final Toggle toggle = new Toggle();
     public static void main(String[] args) {
         final Toy toy = new Toy();
         final User user = new User();
@@ -10,7 +11,7 @@ public class Main {
 
         try {
             userThread.join();
-            toy.setStop(true);
+            toyThread.interrupt();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

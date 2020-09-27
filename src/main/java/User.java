@@ -1,5 +1,5 @@
 public class User implements Runnable {
-    Toggle toggle = Toggle.getInstance();
+    Toggle toggle = Toggle.toggle;
     private final int waitTime = 3000;
 
     public void setToggle() {
